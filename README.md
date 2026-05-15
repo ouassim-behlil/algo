@@ -113,11 +113,11 @@ while running:
         # Clic souris
         if event.type == pygame.MOUSEBUTTONDOWN:
 
-            pos = event.pos
+            mx, my = pygame.mouse.get_pos()
 
             for i in range(len(cards)):
 
-                if cards[i].rect.collidepoint(pos):
+                if cards[i].rect.collidepoint(mx, my):
 
                     if i == active_card:
                         score += 1
